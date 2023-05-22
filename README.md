@@ -1,6 +1,7 @@
 # Sentimental-Analysis-using-NLP
-a guide to sentimental analysis using NLP\\n
-﻿ABSTRACT\\n
+a guide to sentimental analysis using NLP
+
+ABSTRACT
 
 
 Sentiment analysis or opinion mining is one of the major tasks of NLP (Natural Language Processing). Sentiment analysis has gained much attention in recent years. In this paper, we aim to tackle the problem of sentiment polarity categorization, which is one of the fundamental problems of sentiment analysis. A general process for sentiment polarity categorization is proposed with detailed process descriptions. Data used in this study are online product reviews collected from Amazon.com.\\n
