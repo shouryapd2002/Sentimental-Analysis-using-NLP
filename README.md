@@ -65,13 +65,13 @@ IMPLEMENTATION
 
 
 
-<pre>#importing all the Librarires required
-<pre>!pip3 install seaborn
-<pre>import pandas as pd
-<pre>import matplotlib.pyplot as plt
-<pre>import seaborn as sns
-<pre>from wordcloud import WordCloud
-<pre>import re
+<pre>#importing all the Librarires required</pre>
+<pre>!pip3 install seaborn</pre>
+<pre>import pandas as pd</pre>
+<pre>import matplotlib.pyplot as plt</pre>
+<pre>import seaborn as sns</pre>
+<pre>from wordcloud import WordCloud</pre>
+<pre>import re</pre>
 Requirement already satisfied: seaborn in c:\users\shourya\anaconda3\lib\site-packages (0.12.2)
 Requirement already satisfied: matplotlib!=3.6.1,>=3.1 in c:\users\shourya\anaconda3\lib\site-packages (from seaborn) (3.7.0)
 Requirement already satisfied: pandas>=0.25 in c:\users\shourya\anaconda3\lib\site-packages (from seaborn) (1.5.3)
@@ -86,8 +86,8 @@ Requirement already satisfied: contourpy>=1.0.1 in c:\users\shourya\anaconda3\li
 Requirement already satisfied: packaging>=20.0 in c:\users\shourya\anaconda3\lib\site-packages (from matplotlib!=3.6.1,>=3.1->seaborn) (22.0)
 Requirement already satisfied: pytz>=2020.1 in c:\users\shourya\anaconda3\lib\site-packages (from pandas>=0.25->seaborn) (2022.7)
 Requirement already satisfied: six>=1.5 in c:\users\shourya\anaconda3\lib\site-packages (from python-dateutil>=2.7->matplotlib!=3.6.1,>=3.1->seaborn) (1.16.0)
-<pre>#installing wordcloud
-<pre>!pip3 install wordcloud
+<pre>#installing wordcloud</pre>
+<pre>!pip3 install wordcloud</pre>
 Requirement already satisfied: wordcloud in c:\users\shourya\anaconda3\lib\site-packages (1.9.2)
 Requirement already satisfied: matplotlib in c:\users\shourya\anaconda3\lib\site-packages (from wordcloud) (3.7.0)
 Requirement already satisfied: pillow in c:\users\shourya\anaconda3\lib\site-packages (from wordcloud) (9.4.0)
@@ -101,15 +101,15 @@ Requirement already satisfied: fonttools>=4.22.0 in c:\users\shourya\anaconda3\l
 Requirement already satisfied: python-dateutil>=2.7 in c:\users\shourya\anaconda3\lib\site-packages (from matplotlib->wordcloud) (2.8.2)
 Requirement already satisfied: six>=1.5 in c:\users\shourya\anaconda3\lib\site-packages (from python-dateutil>=2.7->matplotlib->wordcloud) (1.16.0)
 <pre>#nltk – Natural Language Toolkit is a collection of libraries for natural language processing
-<pre>#stopwords – a collection of words that don’t provide any meaning to a sentence
-<pre>#WordNetLemmatizer – used to convert different forms of words into a single item but still keeping the
-<pre>import nltk
-<pre>nltk.download('stopwords')
-<pre>nltk.download('wordnet')
-<pre>nltk.download('omw-1.4')
-<pre>from nltk.corpus import stopwords
-<pre>from nltk.stem import WordNetLemmatizer
-[nltk_data] Downloading package stopwords to
+<pre>#stopwords – a collection of words that don’t provide any meaning to a sentence</pre>
+<pre>#WordNetLemmatizer – used to convert different forms of words into a single item but still keeping the</pre>
+<pre>import nltk</pre>
+<pre>nltk.download('stopwords')</pre>
+<pre>nltk.download('wordnet')</pre>
+<pre>nltk.download('omw-1.4')</pre>
+<pre>from nltk.corpus import stopwords</pre>
+<pre>from nltk.stem import WordNetLemmatizer</pre>
+[nltk_data] Downloading package stopwords to</pre>
 [nltk_data]     C:\Users\Shourya\AppData\Roaming\nltk_data...
 [nltk_data]   Package stopwords is already up-to-date!
 [nltk_data] Downloading package wordnet to
@@ -118,22 +118,22 @@ Requirement already satisfied: six>=1.5 in c:\users\shourya\anaconda3\lib\site-p
 [nltk_data] Downloading package omw-1.4 to
 [nltk_data]     C:\Users\Shourya\AppData\Roaming\nltk_data...
 [nltk_data]   Package omw-1.4 is already up-to-date!
-<pre>#Scikit-Learn (Machine Learning Library for Python)
-<pre>#CountVectorizer – transform text to vectors
-<pre>#RandomizedSearchCV – for hyperparameter tuning
-<pre>#RandomForestClassifier – machine learning algorithm for classification
-<pre>#Accuracy Score – no. of correctly classified instances/total no. of instances
-<pre>#Precision Score – the ratio of correctly predicted instances over total positive instances
-<pre>#Recall Score – the ratio of correctly predicted instances over total instances in that class
-<pre>#Roc Curve – a plot of true positive rate against false positive rate
-<pre>#Classification Report – report of precision, recall and f1 score
-<pre>#Confusion Matrix – a table used to describe the classification models
-<pre>!pip install -U scikit-learn
-<pre>from sklearn.model_selection import GridSearchCV
-<pre>from sklearn.ensemble import RandomForestClassifier
-<pre>from sklearn.metrics import roc_curve
-<pre>from sklearn.metrics import auc
-<pre>from sklearn.metrics import ConfusionMatrixDisplay, accuracy_score, precision_score, recall_score, classification_report
+<pre>#Scikit-Learn (Machine Learning Library for Python)</pre>
+<pre>#CountVectorizer – transform text to vectors</pre>
+<pre>#RandomizedSearchCV – for hyperparameter tuning</pre>
+<pre>#RandomForestClassifier – machine learning algorithm for classification</pre>
+<pre>#Accuracy Score – no. of correctly classified instances/total no. of instances</pre>
+<pre>#Precision Score – the ratio of correctly predicted instances over total positive instances</pre>
+<pre>#Recall Score – the ratio of correctly predicted instances over total instances in that class</pre>
+<pre>#Roc Curve – a plot of true positive rate against false positive rate</pre>
+<pre>#Classification Report – report of precision, recall and f1 score</pre>
+<pre>#Confusion Matrix – a table used to describe the classification models</pre>
+<pre>!pip install -U scikit-learn</pre>
+<pre>from sklearn.model_selection import GridSearchCV</pre>
+<pre>from sklearn.ensemble import RandomForestClassifier</pre>
+<pre>from sklearn.metrics import roc_curve</pre>
+<pre>from sklearn.metrics import auc</pre>
+<pre>from sklearn.metrics import ConfusionMatrixDisplay, accuracy_score, precision_score, recall_score, classification_report</pre>
 Requirement already satisfied: scikit-learn in c:\users\shourya\anaconda3\lib\site-packages (1.2.2)
 Requirement already satisfied: threadpoolctl>=2.0.0 in c:\users\shourya\anaconda3\lib\site-packages (from scikit-learn) (2.2.0)
 Requirement already satisfied: joblib>=1.1.1 in c:\users\shourya\anaconda3\lib\site-packages (from scikit-learn) (1.1.1)
