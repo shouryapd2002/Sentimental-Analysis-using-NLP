@@ -3,7 +3,7 @@ a guide to sentimental analysis using NLP
 
 ABSTRACT
 
-<pre>Sentiment analysis or opinion mining is one of the major tasks of NLP (Natural Language Processing). Sentiment analysis has gained much attention in recent years. In this paper, we aim to tackle the problem of sentiment polarity categorization, which is one of the fundamental problems of sentiment analysis. A general process for sentiment polarity categorization is proposed with detailed process descriptions. Data used in this study are online product reviews collected from Amazon.com.</pre>
+Sentiment analysis or opinion mining is one of the major tasks of NLP (Natural Language Processing). Sentiment analysis has gained much attention in recent years. In this paper, we aim to tackle the problem of sentiment polarity categorization, which is one of the fundamental problems of sentiment analysis. A general process for sentiment polarity categorization is proposed with detailed process descriptions. Data used in this study are online product reviews collected from Amazon.com.</pre>
 Experiments for both sentence-level categorization and review-level categorization are performed with promising outcomes. At last, we also give insight into our future work on sentiment analysis.
 
 INTRODUCTION
@@ -65,13 +65,13 @@ IMPLEMENTATION
 
 
 
-#importing all the Librarires required
-!pip3 install seaborn
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from wordcloud import WordCloud
-import re
+<pre>#importing all the Librarires required
+<pre>!pip3 install seaborn
+<pre>import pandas as pd
+<pre>import matplotlib.pyplot as plt
+<pre>import seaborn as sns
+<pre>from wordcloud import WordCloud
+<pre>import re
 Requirement already satisfied: seaborn in c:\users\shourya\anaconda3\lib\site-packages (0.12.2)
 Requirement already satisfied: matplotlib!=3.6.1,>=3.1 in c:\users\shourya\anaconda3\lib\site-packages (from seaborn) (3.7.0)
 Requirement already satisfied: pandas>=0.25 in c:\users\shourya\anaconda3\lib\site-packages (from seaborn) (1.5.3)
@@ -86,8 +86,8 @@ Requirement already satisfied: contourpy>=1.0.1 in c:\users\shourya\anaconda3\li
 Requirement already satisfied: packaging>=20.0 in c:\users\shourya\anaconda3\lib\site-packages (from matplotlib!=3.6.1,>=3.1->seaborn) (22.0)
 Requirement already satisfied: pytz>=2020.1 in c:\users\shourya\anaconda3\lib\site-packages (from pandas>=0.25->seaborn) (2022.7)
 Requirement already satisfied: six>=1.5 in c:\users\shourya\anaconda3\lib\site-packages (from python-dateutil>=2.7->matplotlib!=3.6.1,>=3.1->seaborn) (1.16.0)
-#installing wordcloud
-!pip3 install wordcloud
+<pre>#installing wordcloud
+<pre>!pip3 install wordcloud
 Requirement already satisfied: wordcloud in c:\users\shourya\anaconda3\lib\site-packages (1.9.2)
 Requirement already satisfied: matplotlib in c:\users\shourya\anaconda3\lib\site-packages (from wordcloud) (3.7.0)
 Requirement already satisfied: pillow in c:\users\shourya\anaconda3\lib\site-packages (from wordcloud) (9.4.0)
@@ -100,15 +100,15 @@ Requirement already satisfied: packaging>=20.0 in c:\users\shourya\anaconda3\lib
 Requirement already satisfied: fonttools>=4.22.0 in c:\users\shourya\anaconda3\lib\site-packages (from matplotlib->wordcloud) (4.25.0)
 Requirement already satisfied: python-dateutil>=2.7 in c:\users\shourya\anaconda3\lib\site-packages (from matplotlib->wordcloud) (2.8.2)
 Requirement already satisfied: six>=1.5 in c:\users\shourya\anaconda3\lib\site-packages (from python-dateutil>=2.7->matplotlib->wordcloud) (1.16.0)
-#nltk – Natural Language Toolkit is a collection of libraries for natural language processing
-#stopwords – a collection of words that don’t provide any meaning to a sentence
-#WordNetLemmatizer – used to convert different forms of words into a single item but still keeping the
-import nltk
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('omw-1.4')
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
+<pre>#nltk – Natural Language Toolkit is a collection of libraries for natural language processing
+<pre>#stopwords – a collection of words that don’t provide any meaning to a sentence
+<pre>#WordNetLemmatizer – used to convert different forms of words into a single item but still keeping the
+<pre>import nltk
+<pre>nltk.download('stopwords')
+<pre>nltk.download('wordnet')
+<pre>nltk.download('omw-1.4')
+<pre>from nltk.corpus import stopwords
+<pre>from nltk.stem import WordNetLemmatizer
 [nltk_data] Downloading package stopwords to
 [nltk_data]     C:\Users\Shourya\AppData\Roaming\nltk_data...
 [nltk_data]   Package stopwords is already up-to-date!
@@ -118,45 +118,45 @@ from nltk.stem import WordNetLemmatizer
 [nltk_data] Downloading package omw-1.4 to
 [nltk_data]     C:\Users\Shourya\AppData\Roaming\nltk_data...
 [nltk_data]   Package omw-1.4 is already up-to-date!
-#Scikit-Learn (Machine Learning Library for Python)
-#CountVectorizer – transform text to vectors
-#RandomizedSearchCV – for hyperparameter tuning
-#RandomForestClassifier – machine learning algorithm for classification
-#Accuracy Score – no. of correctly classified instances/total no. of instances
-#Precision Score – the ratio of correctly predicted instances over total positive instances
-#Recall Score – the ratio of correctly predicted instances over total instances in that class
-#Roc Curve – a plot of true positive rate against false positive rate
-#Classification Report – report of precision, recall and f1 score
-#Confusion Matrix – a table used to describe the classification models
-!pip install -U scikit-learn
-from sklearn.model_selection import GridSearchCV
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import roc_curve
-from sklearn.metrics import auc
-from sklearn.metrics import ConfusionMatrixDisplay, accuracy_score, precision_score, recall_score, classification_report
+<pre>#Scikit-Learn (Machine Learning Library for Python)
+<pre>#CountVectorizer – transform text to vectors
+<pre>#RandomizedSearchCV – for hyperparameter tuning
+<pre>#RandomForestClassifier – machine learning algorithm for classification
+<pre>#Accuracy Score – no. of correctly classified instances/total no. of instances
+<pre>#Precision Score – the ratio of correctly predicted instances over total positive instances
+<pre>#Recall Score – the ratio of correctly predicted instances over total instances in that class
+<pre>#Roc Curve – a plot of true positive rate against false positive rate
+<pre>#Classification Report – report of precision, recall and f1 score
+<pre>#Confusion Matrix – a table used to describe the classification models
+<pre>!pip install -U scikit-learn
+<pre>from sklearn.model_selection import GridSearchCV
+<pre>from sklearn.ensemble import RandomForestClassifier
+<pre>from sklearn.metrics import roc_curve
+<pre>from sklearn.metrics import auc
+<pre>from sklearn.metrics import ConfusionMatrixDisplay, accuracy_score, precision_score, recall_score, classification_report
 Requirement already satisfied: scikit-learn in c:\users\shourya\anaconda3\lib\site-packages (1.2.2)
 Requirement already satisfied: threadpoolctl>=2.0.0 in c:\users\shourya\anaconda3\lib\site-packages (from scikit-learn) (2.2.0)
 Requirement already satisfied: joblib>=1.1.1 in c:\users\shourya\anaconda3\lib\site-packages (from scikit-learn) (1.1.1)
 Requirement already satisfied: numpy>=1.17.3 in c:\users\shourya\anaconda3\lib\site-packages (from scikit-learn) (1.23.5)
 Requirement already satisfied: scipy>=1.3.2 in c:\users\shourya\anaconda3\lib\site-packages (from scikit-learn) (1.10.0)
-#emotion Dataset includes train.txt,test.txt,val.txt
-df_train = pd.read_csv("train.txt",delimiter=';',names=['text','label'])
-df_val = pd.read_csv("val.txt",delimiter=';',names=['text','label'])
-df = pd.concat([df_train,df_val])
-df.reset_index(inplace=True,drop=True)
-#Now, we will create a custom encoder to convert categorical target labels to numerical form, i.e. (0 and 1)
-def custom_encoder(df):
+<pre><pre>#emotion Dataset includes train.txt,test.txt,val.txt
+<pre>df_train = pd.read_csv("train.txt",delimiter=';',names=['text','label'])
+<pre>df_val = pd.read_csv("val.txt",delimiter=';',names=['text','label'])
+<pre>df = pd.concat([df_train,df_val])
+<pre>df.reset_index(inplace=True,drop=True)
+<pre>#Now, we will create a custom encoder to convert categorical target labels to numerical form, i.e. (0 and 1)
+<pre>def custom_encoder(df):
     df.replace(to_replace ="surprise", value =1, inplace=True)
     df.replace(to_replace ="love", value =1, inplace=True)
     df.replace(to_replace ="joy", value =1, inplace=True)
     df.replace(to_replace ="fear", value =0, inplace=True)
     df.replace(to_replace ="anger", value =0, inplace=True)
     df.replace(to_replace ="sadness", value =0, inplace=True)
-custom_encoder(df['label'])
-#Data Pre-Processing
-#object of WordNetLemmatizer
-lm = WordNetLemmatizer()
-def text_transformation(df_col):
+<pre>custom_encoder(df['label'])
+<pre>#Data Pre-Processing
+<pre>#object of WordNetLemmatizer
+<pre>lm = WordNetLemmatizer()
+<pre>def text_transformation(df_col):
     corpus = []
     for item in df_col:
         new_item = re.sub('[^a-zA-Z]',' ',str(item))
@@ -164,17 +164,17 @@ def text_transformation(df_col):
         new_item = new_item.split()
         new_item = [lm.lemmatize(word) for word in new_item if word not in set(stopwords.words('english'))]
         corpus.append(' '.join(str(x) for x in new_item))
-    return corpus
-corpus = text_transformation(df['text'])
-#Bag Of Words(BOW)
-from pylab import rcParams
-rcParams['figure.figsize'] = 20,8
-word_cloud = ""
-for row in corpus:
+<pre>    return corpus
+<pre>corpus = text_transformation(df['text'])
+<pre>#Bag Of Words(BOW)
+<pre>from pylab import rcParams
+<pre>rcParams['figure.figsize'] = 20,8
+<pre>word_cloud = ""
+<pre>for row in corpus:
     for word in row:
         word_cloud+=" ".join(word)
-wordcloud = WordCloud(width = 1000, height = 500,background_color ='white',min_font_size = 10).generate(word_cloud)
-plt.imshow(wordcloud)
+<pre>wordcloud = WordCloud(width = 1000, height = 500,background_color ='white',min_font_size = 10).generate(word_cloud)
+<pre>plt.imshow(wordcloud)
 <matplotlib.image.AxesImage at 0x20d88e5a200>
   
 
@@ -187,30 +187,30 @@ plt.imshow(wordcloud)
 #First, We will create a dictionary, “parameters” which will contain the values of different hyperparameters.
 #We will pass this as a parameter to RandomSearchCV to train our random forest classifier model using all possible 
 #combinations of these parameters to find the best model.
-from sklearn.feature_extraction.text import CountVectorizer
-cv = CountVectorizer(ngram_range=(1,2))
-traindata = cv.fit_transform(corpus)
-X = traindata
-y = df.label
-parameters = {'max_features': ('auto','sqrt'),
+<pre>from sklearn.feature_extraction.text import CountVectorizer
+<pre>cv = CountVectorizer(ngram_range=(1,2))
+<pre>traindata = cv.fit_transform(corpus)
+<pre>X = traindata
+<pre>y = df.label
+<pre>parameters = {'max_features': ('auto','sqrt'),
              'n_estimators': [50, 10, 15],
              'max_depth': [2, 5, None],
              'min_samples_split': [2, 5, 10],
              'min_samples_leaf': [1, 2, 5, 10],
              'bootstrap': [True, False]}
-from sklearn.model_selection import RandomizedSearchCV
-rf_RandomGrid = RandomizedSearchCV(RandomForestClassifier(),parameters,n_iter=10,cv=5,return_train_score=True,n_jobs=-1)
-rf_RandomGrid.fit(X,y)
-rf_RandomGrid.best_params_
+<pre>from sklearn.model_selection import RandomizedSearchCV
+<pre>rf_RandomGrid = RandomizedSearchCV(RandomForestClassifier(),parameters,n_iter=10,cv=5,return_train_score=True,n_jobs=-1)
+<pre>rf_RandomGrid.fit(X,y)
+<pre>rf_RandomGrid.best_params_
 {'n_estimators': 15,
  'min_samples_split': 10,
  'min_samples_leaf': 1,
  'max_features': 'sqrt',
  'max_depth': None,
  'bootstrap': True}
-#And then, we can view all the models and their respective parameters,
-#mean test score and rank as  GridSearchCV stores all the results in the cv_results_ attribute.
-for i in range(10):
+<pre>#And then, we can view all the models and their respective parameters,
+<pre>#mean test score and rank as  GridSearchCV stores all the results in the cv_results_ attribute.
+<pre>for i in range(10):
     print('Parameters: ',rf_RandomGrid.cv_results_['params'][i])
     print('Mean Test Score: ',rf_RandomGrid.cv_results_['mean_test_score'][i])
     print('Rank: ',rf_RandomGrid.cv_results_['rank_test_score'][i])
@@ -244,37 +244,36 @@ Rank:  8
 Parameters:  {'n_estimators': 50, 'min_samples_split': 2, 'min_samples_leaf': 10, 'max_features': 'sqrt', 'max_depth': 2, 'bootstrap': True}
 Mean Test Score:  0.5443888888888889
 Rank:  9
-#Now, we will choose the best parameters obtained from GridSearchCV and create a final random forest classifier model and then train our new model.
-rfc = RandomForestClassifier(max_features=rf_RandomGrid.best_params_['max_features'],
+<pre>#Now, we will choose the best parameters obtained from GridSearchCV and create a final random forest classifier model and then train our new model.
+<pre>rfc = RandomForestClassifier(max_features=rf_RandomGrid.best_params_['max_features'],
                                       max_depth=rf_RandomGrid.best_params_['max_depth'],
                                       n_estimators=rf_RandomGrid.best_params_['n_estimators'],
                                       min_samples_split=rf_RandomGrid.best_params_['min_samples_split'],
                                       min_samples_leaf=rf_RandomGrid.best_params_['min_samples_leaf'],
                                       bootstrap=rf_RandomGrid.best_params_['bootstrap'])
-rfc.fit(X,y)
-RandomForestClassifier(min_samples_split=10, n_estimators=15)
-#Test Data Transformation
-test_df = pd.read_csv('test.txt',delimiter=';',names=['text','label'])
-X_test,y_test = test_df.text,test_df.label
-#encode the labels into two classes , 0 and 1
-test_df = custom_encoder(y_test)
-#pre-processing of text
-test_corpus = text_transformation(X_test)
-#convert text data into vectors
-testdata = cv.transform(test_corpus)
-#predict the target
-predictions = rfc.predict(testdata)
-rcParams['figure.figsize'] = 10,5
-cm=ConfusionMatrixDisplay.__init__(y_test,predictions)
-acc_score = accuracy_score(y_test,predictions)
-pre_score = precision_score(y_test,predictions)
-rec_score = recall_score(y_test,predictions)
-print('Accuracy_score: ',acc_score)
-print('Precision_score: ',pre_score)
-print('Recall_score: ',rec_score)
-print("-"*50)
-cr = classification_report(y_test,predictions)
-print(cr)
+<pre>rfc.fit(X,y)
+<pre>RandomForestClassifier(min_samples_split=10, n_estimators=15)
+<pre>#Test Data Transformation
+<pre>test_df = pd.read_csv('test.txt',delimiter=';',names=['text','label'])
+<pre>X_test,y_test = test_df.text,test_df.label
+<pre>#encode the labels into two classes , 0 and 1
+<pre>test_df = custom_encoder(y_test)
+<pre>#pre-processing of text
+<pre>test_corpus = text_transformation(X_test)
+<pre>#convert text data into vectors
+<pre>testdata = cv.transform(test_corpus)
+<pre>#predict the target
+<pre>predictions = rfc.predict(testdata)
+<pre>rcParams['figure.figsize'] = 10,5
+<pre>cm=ConfusionMatrixDisplay.__init__(y_test,predictions)
+<pre>acc_score = accuracy_score(y_test,predictions)
+<pre>pre_score = precision_score(y_test,predictions)
+<pre>rec_score = recall_score(y_test,predictions)
+<pre>print('Accuracy_score: ',acc_score)
+<pre>print('Precision_score: ',pre_score)
+<pre>print('Recall_score: ',rec_score)
+<pre>print("-"*50)
+<pre>cr = classification_report(y_test,predictiprint(cr)
 Accuracy_score:  0.9475
 Precision_score:  0.957351290684624
 Recall_score:  0.9271739130434783
@@ -288,38 +287,38 @@ Recall_score:  0.9271739130434783
    macro avg       0.95      0.95      0.95      2000
 weighted avg       0.95      0.95      0.95      2000
 
-#Model Evaluation
-predictions_probability = rfc.predict_proba(testdata)
-fpr,tpr,thresholds = roc_curve(y_test,predictions_probability[:,1])
-plt.plot(fpr,tpr)
-plt.plot([0,1])
-plt.title('ROC Curve')
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.show()
+<pre>#Model Evaluation
+<pre>predictions_probability = rfc.predict_proba(testdata)
+<pre>fpr,tpr,thresholds = roc_curve(y_test,predictions_probability[:,1])
+<pre>plt.plot(fpr,tpr)
+<pre>plt.plot([0,1])
+<pre>plt.title('ROC Curve')
+<pre>plt.xlabel('False Positive Rate')
+<pre>plt.ylabel('True Positive Rate')
+<pre>plt.show()
   
 
 
-#Model Prediction
-def expression_check(prediction_input):
+<pre>#Model Prediction
+<pre>def expression_check(prediction_input):
     if prediction_input == 0:
         print("Input statement has Negative Sentiment.")
     elif prediction_input == 1:
         print("Input statement has Positive Sentiment.")
     else:
         print("Invalid Statement.")
-# function to take the input statement and perform the same transformations we did earlier
-def sentiment_predictor(input):
+<pre># function to take the input statement and perform the same transformations we did earlier
+<pre>def sentiment_predictor(input):
     input = text_transformation(input)
     transformed_input = cv.transform(input)
     prediction = rfc.predict(transformed_input)
     expression_check(prediction)
-input1 = ["i feel more virtuous than when i eat veggies dipped in hummus."]
-input2 = ["I bought a new phone and it's so bad."]
-sentiment_predictor(input1)
-sentiment_predictor(input2)
-Input statement has Positive Sentiment.
-Input statement has Negative Sentiment.
+<pre>input1 = ["i feel more virtuous than when i eat veggies dipped in hummus."]
+<pre>input2 = ["I bought a new phone and it's so bad."]
+<pre>sentiment_predictor(input1)
+<pre>sentiment_predictor(input2)
+<pre>Input statement has Positive Sentiment.
+<pre>Input statement has Negative Sentiment.
 ________________
 
 
